@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;1,600&family=Inria+Sans&family=Istok+Web:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --ceu-7: #38CDF7;
+    --jeans-2: #B5CADC;
+    --marinho-3: #6070A1;
+    --marinho-4: #596998;
+    --lilas-13: #3C2444;
+    --marinho-9: #344475;
+    --preto-9: #0A1019;
+    --branco-2: #E2F2FF;
+
+    --barlow: 'Barlow Condensed', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
+    --inria: 'Inria Sans', 'Courier New', Courier, monospace;
+    --istok: 'Istok Web', 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.btn{
+    background: var(--ceu-7);
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: hidden;
+    font-family: var(--istok);
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--lilas-13);
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+html{
+    background: 
+        url('Img/plano-de-fundo.svg') fixed,
+        linear-gradient(to bottom, var(--branco-2), var(--jeans-2));
+    overflow-y: scroll;
+}
+
+body{
+    max-width: 950px;
+    min-width: 200px;
+    background: linear-gradient(to bottom, var(--marinho-3), var(--preto-9));
+    margin: 0 auto;
+
+}
+
+header{
+    width: 100%;
+    max-width: 950px;
+    height: 80px;
+    font-family: var(--istok);
+    font-weight: 600;
+    position: fixed;
+    z-index: 1;
+}
+
+#logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+#logo a{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    background: var(--branco-2);
+    padding: 5px;
+    border-radius: 100px;
+}
+
+#logo img{
+    height: 100%;
+    width: auto;
+}
+
+nav{
+    flex-grow: 1;
+}
+
+ul.menu{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu > li{
+    margin: 0 15px;
+}
+
+.menu > li > a{
+    color: white;
+}
+
+.menu > li:last-child{
+    margin: 0 0 0 15px;
+}
+
+header .menu > li:last-child{
+    border-radius: 100px;
+    
+}
+
+.menu > li.btn > a{
+    color: var(--lilas-13);
+}
+
+
+
+main{
+    height: 200vh;
+    position: relative;
+}
+
+#ruina{
+    width: 60%;
+    height: 140vh;
+    background-image: url('../Img/ruina-sylvanor.png');
+    background-size: cover;
+    border-bottom-right-radius: 400px;
+    float: left;
+}
+
+form legend{
+    display: block;
+    width: 100%;
+    font-family: var(--barlow);
+    font-weight: 600;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+form label{
+    display: block;
+    width: 100%;
+    margin-top: 1.2em;
+    font-family: var(--barlow);
+    font-weight: 600;
+}
+
+form input{
+    height: 2.8em;
+    background: rgba( 255, 255, 255, 0.25);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba( 0, 0, 0, .4);
+    
+}
+
+form input[type="submit"]{
+    height: auto;
+    margin-top: 40px;
+}
+
+#login{
+    width: 40%;
+    float: right;
+    height: 100vh;
+}
+
+#login form{
+    width: 100%;
+    margin-top: 100px;
+    padding: 35px 60px 35px 40px;
+    box-sizing: border-box;
+}
+
+#login legend{
+    color: var(--ceu-7);
+}
+
+#cadastro{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cadastro .container{
+    width: 65%;
+    height: auto;
+    background: var(--ceu-7);
+    display: flex;
+
+}
+
+.container img{
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    border-bottom-left-radius: 500px;
+    border-top-left-radius: 500px;
+
+}
+
+#cadastro form{
+    width: 55%;
+    padding: 35px 40px;
+}
+
+#cadastro form input[type="submit"]{
+    color: white;
+    background: linear-gradient(to top, var(--preto-9), var(--marinho-9));
+}
+
+
+footer{
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(to top, #101010, #252525);
+    color: white;
+    font-family: var(--barlow);
+}
+
+footer > div.box{
+    height: 100%;
+    padding: 15px 60px;
+}
+
+footer span{
+    font-style: italic;
+    font-size: 600;
+}
+
+footer > div > div:nth-child(2){
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul{
+    width: 100%;
+}
+
+.item-footer{
+    height: 25px;
+    padding: 5px;
+}
+
+.item-footer a{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.item-footer > a > img{
+    height: 100%;
+    width: auto;
+}
+
+
+
+@media (max-width:570px){
+    
+
+    .box{
+        padding: 0 30px;
+    }
+
+    header{
+        display: flex;
+        height: auto;
+        flex-direction: column;background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 0 20px rgba( 0, 0, 0, 0.4 );
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur( 13.5px );
+    }
+
+    #logo{
+        height: 80px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    header ul{
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    header ul.menu li{
+        margin: 0;
+    }
+
+    main{
+        height: auto;
+
+    }
+
+    #ruina{
+        display: none;
+    }
+
+    #login{
+        width: 100%;
+        height: auto;
+        min-height: 70vh;
+    }
+
+    #login form{
+        max-width: 350px;
+        margin: 200px auto 0;
+        padding: 35px 40px;
+        float: none;
+        
+    }
+
+    #cadastro{
+        position: static;
+        height: 140vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #cadastro div.container{
+        width: 100%;
+        height: 120vh;
+        background: url("Img/imagem-cadastro.png") fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+    }
+
+    .container img{
+        display: none;
+    }
+
+    #cadastro form{
+        width: 100%;
+        height: 50%;
+        background: var(--ceu-7);
+        margin: 0;
+    }
+
+}
