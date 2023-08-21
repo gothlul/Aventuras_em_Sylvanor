@@ -35,6 +35,27 @@
     box-sizing: border-box;
 }
 
+ul.menu{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: .9em;
+}
+
+.menu > li{
+    margin: 0 15px;
+}
+
+.menu > li > a{
+    color: white;
+}
+
+.menu > li:last-child{
+    margin: 0 0 0 15px;
+}
+
+
 
 *{
     margin: 0;
@@ -51,17 +72,21 @@ html{
 }
 
 body{
-    max-width: 950px;
+    max-width: 960px;
     min-width: 200px;
     background: linear-gradient(to bottom, var(--marinho-3), var(--preto-9));
     margin: 0 auto;
 
 }
 
+
+/*---------Cabeçalho-----------------------------------------------------------------*/
+
+
 header{
     width: 100%;
     max-width: 950px;
-    height: 80px;
+    height: 100px;
     font-family: var(--istok);
     font-weight: 600;
     position: fixed;
@@ -93,26 +118,8 @@ nav{
     flex-grow: 1;
 }
 
-ul.menu{
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
 
-.menu > li{
-    margin: 0 15px;
-}
-
-.menu > li > a{
-    color: white;
-}
-
-.menu > li:last-child{
-    margin: 0 0 0 15px;
-}
-
-header .menu > li:last-child{
+header .menu > li.btn{
     border-radius: 100px;
     
 }
@@ -122,14 +129,18 @@ header .menu > li:last-child{
 }
 
 
+/*---------Pagina inicial------------------------------------------------------------*/
+
+
 
 main{
     height: 200vh;
     position: relative;
 }
 
+
 #ruina{
-    width: 60%;
+    width: 55%;
     height: 140vh;
     background-image: url('../Img/ruina-sylvanor.png');
     background-size: cover;
@@ -140,7 +151,7 @@ main{
 form legend{
     display: block;
     width: 100%;
-    font-family: var(--barlow);
+    font-family: var(--istok);
     font-weight: 600;
     font-size: 1.8em;
     text-transform: uppercase;
@@ -149,9 +160,14 @@ form legend{
 form label{
     display: block;
     width: 100%;
-    margin-top: 1.2em;
+    margin: 1.2em 0 5px 0;
     font-family: var(--barlow);
-    font-weight: 600;
+    font-weight: normal;
+    text-indent: 2.5px;
+}
+
+form label.primeiro{
+    margin-top: 30px;
 }
 
 form input{
@@ -159,7 +175,7 @@ form input{
     background: rgba( 255, 255, 255, 0.25);
     width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 0 1px 4px rgba( 0, 0, 0, .4);
@@ -169,17 +185,22 @@ form input{
 form input[type="submit"]{
     height: auto;
     margin-top: 40px;
+    text-transform: uppercase;
 }
 
+/*---------Formulario de login-------------------------------------------------------*/
+
 #login{
-    width: 40%;
+    width: 45%;
     float: right;
     height: 100vh;
+    color: white;
 }
 
 #login form{
-    width: 100%;
-    margin-top: 100px;
+    width: 80%;
+    min-width: 350px;
+    margin-top: 200px;
     padding: 35px 60px 35px 40px;
     box-sizing: border-box;
 }
@@ -187,6 +208,10 @@ form input[type="submit"]{
 #login legend{
     color: var(--ceu-7);
 }
+
+
+
+/*---------Formulario de cadastro----------------------------------------------------*/
 
 #cadastro{
     width: 100%;
@@ -196,6 +221,7 @@ form input[type="submit"]{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--preto-9);
 }
 
 #cadastro .container{
@@ -225,6 +251,13 @@ form input[type="submit"]{
     color: white;
     background: linear-gradient(to top, var(--preto-9), var(--marinho-9));
 }
+
+#cadastro label{
+    font-weight: 600;
+}
+
+
+/*---------Rodape--------------------------------------------------------------------*/
 
 
 footer{
@@ -272,7 +305,7 @@ footer ul{
     width: auto;
 }
 
-
+/*---------Responsividade mobile-----------------------------------------------------*/
 
 @media (max-width:570px){
     
@@ -353,6 +386,12 @@ footer ul{
         height: 50%;
         background: var(--ceu-7);
         margin: 0;
+        padding: 80px 60px;
     }
 
+}
+
+
+@media (min-width:760px) and (max-width:920px){
+    
 }
